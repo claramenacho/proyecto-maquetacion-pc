@@ -3,3 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --primary-color: #0a9c6f;
+    --grey-900: black;
+    --grey-700: rgb(54, 54, 54);
+    --grey-300: rgb(190, 190, 190);
+    --grey-200: rgb(204, 203, 203);
+    --green-400: rgb(171, 245, 171);
+    --green-300: rgb(80, 119, 80);
+    --green-100: rgb(146, 146, 146);
+
+
+}
