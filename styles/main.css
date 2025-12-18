@@ -8,15 +8,84 @@
 :root {
     --primary-color: #0a9c6f;
     --grey-900: black;
+    --grey-800: rgb(27, 21, 21);
     --grey-700: rgb(54, 54, 54);
-    --grey-300: rgb(190, 190, 190);
+    --grey-300: rgba(29, 29, 29, 0.986);
     --grey-200: rgb(204, 203, 203);
     --green-400: rgb(171, 245, 171);
     --green-300: rgb(80, 119, 80);
     --green-100: rgb(146, 146, 146);
 
     --primary-font: "Roboto", sans-serif;
-
-
 }
 
+body {
+    background-color: var(--primary-color);
+    padding: 40px;
+}
+
+.app {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    height: 100vh;
+    overflow: hidden;
+}
+
+aside {
+    background-color: var(--grey-900);
+    color: white;
+}
+
+aside header {
+    background-color: var(--grey-800);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.profile h2 {
+    font-size: 18px;
+}
+
+.profile img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.actions {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+
+.actions button {
+    color: rgb(141, 141, 141);
+    padding: 7px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--grey-800);
+    cursor:pointer;
+    transition: transform .2s;
+    
+}
+
+.actions button svg {
+    width: 20px;
+}
+
+.actions button:hover {
+    background-color: rgb(54, 54, 54);
+    transform: translateY(-4px);
+}
