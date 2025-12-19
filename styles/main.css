@@ -11,11 +11,12 @@
     --grey-800: rgb(27, 21, 21);
     --grey-700: rgb(54, 54, 54);
     --grey-300: rgba(29, 29, 29, 0.986);
+    --grey-400: rgba(98, 100, 100, 0.986);
     --grey-200: rgb(204, 203, 203);
+    --grey-100: rgb(240, 239, 239);
     --green-400: rgb(171, 245, 171);
     --green-300: rgb(80, 119, 80);
-    --green-100: rgb(146, 146, 146);
-
+    --green-100: rgb(23, 136, 61);
     --primary-font: "Roboto", sans-serif;
 }
 
@@ -28,9 +29,14 @@ body {
     background-color: white;
     display: grid;
     grid-template-columns: 320px 1fr;
-    height: 100vh;
+    height: 90vh;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 11px 9px 5px -1px rgba(0,0,0,0.11);
+    max-width: 1100px;
+    margin: auto;
 }
+
 
 aside {
     background-color: var(--grey-900);
@@ -88,4 +94,224 @@ aside header {
 .actions button:hover {
     background-color: rgb(54, 54, 54);
     transform: translateY(-4px);
+}
+
+
+
+.search {
+    background-color: var(--grey-800);
+    padding: 10px;
+}
+
+
+.search form input {
+    background-color: var(--grey-700);
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    color: white;
+}
+
+.search input:focus {
+    outline: 1px solid rgb(58, 58, 58);
+}
+
+.chats ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+
+}
+
+.user-chats {
+    display: flex;
+    padding: 10px;
+    /*align-items: center;*/
+    gap: 10px;
+    font-size: small;
+    /*justify-content: space-between;*/
+    
+}
+.usuario-mensaje {
+    display: block;
+    justify-content: left;
+
+
+}
+.user-chats img {
+    border-radius: 50%;
+    width: 40px;
+    
+}
+.mensajeria {
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    margin-left: 60px;
+}
+
+.dia {
+    background-color: rgb(25, 25, 26);
+    color: #21c063;
+    
+}
+.sinleer {
+    background-color: #21c063;
+    border-radius: 40%;
+    margin: center;
+    display:grid;
+    place-items: center;
+    color: black;
+    font-size: 12px;
+
+    
+}
+
+.user-chats:hover {
+    cursor: pointer;
+    background-color: var(--grey-300);
+    border-left: 3px solid var(--green-400);
+}
+
+
+.chat-header {
+    background-color: var(--grey-100);
+    border-bottom: 1px solid var(--grey-200);
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-header img {
+    border-radius: 50%;
+    width: 40px;
+}
+
+.chat-header p {
+    color: var(--grey-400);
+    font-size: small;
+}
+
+.chat-panel {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.messages {
+    padding: 20px;
+    flex: 3;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    /*border-radius: 10px;
+    margin: 5px;*/
+    overflow-y: auto;
+}
+
+.message {
+    background-color: rgb(241, 240, 240);
+    padding: 10px;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 10px 21px 17px -6px rgba(0,0,0,0.23);
+}
+
+.me {
+    align-self: end;
+    background-color: var(--green-400);
+    border-radius: 10px;
+}
+
+.message .time {
+    color: var(--grey-300);
+    margin-top: 10px;
+    font-size: 13px;
+    text-align: end;
+    letter-spacing: 0.5px;
+}
+
+footer {
+    display: flex;
+    background-color: var(--grey-200);
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px
+}
+
+footer button {
+    width: 25px;
+    height: 25px;
+    padding: 3px;
+}
+
+footer svg {
+    width: 100%;
+    height: 100%;
+}
+
+footer form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+
+footer textarea {
+    width: 100%;
+    border-radius: 15px;
+    border-color: var(--grey-200);
+    padding: 8px;
+    resize: none;
+}
+
+footer .clip {
+    background-color: var(--grey-200);
+    border: none;
+    color: var(--grey-100);
+    cursor: pointer;
+    transition: color .3s;
+}
+
+footer .clip:hover {
+    color: var(--grey-800);
+}
+
+footer .send {
+    background-color: var(--green-100);
+    border: none;
+    color: var(--grey-100);
+    width: 45px;
+    height: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .1s;
+    padding: 5px;
+}
+
+footer .send:hover {
+    background-color: #0a9c6f;
+    transform: scale(0.9);
+}
+
+/*responsive desing*/
+
+@media (max-width:800px) {
+
+    .app {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        display: none;
+    }
 }
