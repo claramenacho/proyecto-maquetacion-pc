@@ -144,7 +144,7 @@ aside header {
 
 }
 .user-chats img {
-    border-radius: 50%;
+    border-radius: 45%;
     width: 40px;
     
 }
@@ -158,7 +158,7 @@ aside header {
 }
 
 .dia {
-    background-color: rgb(25, 25, 26);
+    background-color: #000000;
     color: #21c063;
     
 }
